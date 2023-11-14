@@ -1,58 +1,53 @@
 <template>
   <v-dialog
-    v-model="dialog"
+    v-model="dialogHandler"
     fullscreen
     :scrim="false"
     transition="dialog-top-transition"
   >
-    <v-card>
-      <v-toolbar dark color="primary">
-        <v-btn icon dark @click="dialog = false">
-          <v-icon>mdi-close</v-icon>
-        </v-btn>
-        <v-toolbar-title>Settings</v-toolbar-title>
-        <v-spacer></v-spacer>
-        <v-toolbar-items>
-          <v-btn variant="text" @click="dialog = false"> Save </v-btn>
-        </v-toolbar-items>
-      </v-toolbar>
-      <v-list lines="two" subheader>
-        <v-list-subheader>User Controls</v-list-subheader>
+    <v-toolbar color="black pa-5">
+      <v-img :height="80" src="/logo-light.png"></v-img>
+      <v-btn
+        style="position: absolute; right: 20px"
+        icon="mdi-menu"
+        @click="dialogHandler = false"
+      ></v-btn>
+    </v-toolbar>
+
+    <v-card class="bg-black d-flex justify-center">
+      <v-list lines="three" class="bg-black" align="center" variant="text">
         <v-list-item
-          title="Content filtering"
-          subtitle="Set the content filtering level to restrict apps that can be downloaded"
-        ></v-list-item>
-        <v-list-item
-          title="Password"
-          subtitle="Require password for purchase or use password to restrict purchase"
-        ></v-list-item>
-      </v-list>
-      <v-divider></v-divider>
-      <v-list lines="two" subheader>
-        <v-list-subheader>General</v-list-subheader>
-        <v-list-item
-          title="Notifications"
-          subtitle="Notify me about updates to apps or games that I downloaded"
+          data-aos="fade-up"
+          data-aos-easing="linear"
+          data-aos-duration="1000"
+          v-for="(link, i) in links"
+          :key="i"
         >
-          <template v-slot:prepend>
-            <v-checkbox v-model="notifications"></v-checkbox>
-          </template>
+          <v-list-item-title
+            ><v-btn
+              variant="plain"
+              :to="'/' + link.path"
+              :ripple="false"
+              @click="dialog = false"
+              >{{ link.name }}</v-btn
+            ></v-list-item-title
+          >
         </v-list-item>
-        <v-list-item
-          title="Sound"
-          subtitle="Auto-update apps at any time. Data charges may apply"
-        >
-          <template v-slot:prepend>
-            <v-checkbox v-model="sound"></v-checkbox>
-          </template>
+        <v-list-item>
+          <v-btn block>SEND REQUEST</v-btn>
         </v-list-item>
-        <v-list-item
-          title="Auto-add widgets"
-          subtitle="Automatically add home screen widgets"
-        >
-          <template v-slot:prepend>
-            <v-checkbox v-model="widgets"></v-checkbox>
-          </template>
+        <v-list-item>
+          <v-btn icon="mdi-facebook" class="bg-transparent"></v-btn>
+          <v-btn icon="mdi-twitter" class="bg-transparent"></v-btn>
+          <v-btn icon="mdi-youtube" class="bg-transparent"></v-btn>
+          <v-btn icon="mdi-instagram" class="bg-transparent"></v-btn>
+        </v-list-item>
+        <v-list-item>
+          <v-list-item-title> info@archiadeatelieh.com</v-list-item-title>
+          <v-list-item-title class="mt-3"
+            ><v-icon class="me-2">mdi-phone</v-icon> +1 (234) 567
+            890</v-list-item-title
+          >
         </v-list-item>
       </v-list>
     </v-card>
@@ -62,34 +57,52 @@
 <script>
 import { mapWritableState } from "pinia";
 import useAppStore from "../../store/app.js";
+import { useDisplay } from "vuetify/lib/framework.mjs";
 export default {
   data() {
     return {
       notifications: false,
       sound: true,
       widgets: false,
-      items: [
+      links: [
         {
-          title: "Foo",
-          value: "foo",
+          name: "Home",
+          path: "",
         },
         {
-          title: "Bar",
-          value: "bar",
+          name: "Interior Design",
+          path: "interior-design",
         },
         {
-          title: "Fizz",
-          value: "fizz",
+          name: "Showroom",
+          path: "Showroom",
         },
         {
-          title: "Buzz",
-          value: "buzz",
+          name: "Our Brands",
+          path: "our-brands",
+        },
+        {
+          name: "About US",
+          path: "about-us",
         },
       ],
+      display: useDisplay(),
     };
   },
   computed: {
     ...mapWritableState(useAppStore, ["dialog"]),
+    dialogHandler: {
+      get() {
+        if (this.display.mdAndUp) {
+          return false;
+        } else {
+          return this.dialog;
+        }
+      },
+      set(value) {
+        this.dialog = value;
+      },
+    },
   },
 };
 </script>

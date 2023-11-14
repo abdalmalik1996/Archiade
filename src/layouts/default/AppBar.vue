@@ -38,7 +38,7 @@
 <script>
 import { useDisplay } from "vuetify/lib/framework.mjs";
 import { mapWritableState } from "pinia";
-import  useAppStore from "@/store/app";
+import useAppStore from "@/store/app";
 export default {
   data() {
     return {

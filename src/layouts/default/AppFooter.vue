@@ -10,11 +10,11 @@
               width="300"
               class="pl-10"
               :height="100"
-              src="/llll-1.png"
+              src="/logo-light.png"
             ></v-img>
           </v-list-item>
           <v-row>
-            <v-col>
+            <v-col cols="12" sm="6">
               <v-list-item>
                 <v-list-item-title class="text-h6 text-uppercase"
                   ><v-btn variant="text">Home</v-btn></v-list-item-title
@@ -49,7 +49,7 @@
                 >
               </v-list-item>
             </v-col>
-            <v-col>
+            <v-col cols="12" sm="6">
               <v-list-item>
                 <v-list-item-title class="text-h6 text-uppercase">
                   <v-card-actions>
@@ -74,10 +74,10 @@
           </v-row>
         </v-col>
 
-        <v-col class="pa-0">
+        <v-col cols="12" md="5" class="pa-0">
           <v-list-item class="mt-6">
             <v-list-item-title>
-              <h4 class="text-h4">
+              <h4 class="text-h6 text-md-h5 text-lg-h4">
                 LET'S TALK ABOUT YOUR FUTURE <br />
                 PROJECTS WITH US
               </h4>
@@ -94,23 +94,25 @@
     </v-container>
     <v-sheet class="bg-black" width="100%">
       <v-divider class="border-opacity-100" color="white"></v-divider>
-      <div class="d-flex w-100 align-center px-10 py-1">
-        <p class="text-body-2">
-          Copyright © 2023. All Rights Reserved By Archiade Atelier FZ-LLC
-        </p>
-        <v-spacer></v-spacer>
+      <v-container>
+        <div class="d-md-flex w-100 align-center px-8 text-center py-1">
+          <p class="text-body-2">
+            Copyright © 2023. All Rights Reserved By Archiade Atelier FZ-LLC
+          </p>
+          <v-spacer></v-spacer>
 
-        <v-btn
-          variant="text"
-          class="text-capitalize text-body-2 font-weight-light"
-          >Privacy Policy</v-btn
-        >
-        <v-btn
-          variant="text"
-          class="text-capitalize text-body-2 font-weight-light"
-          >Terms & Services</v-btn
-        >
-      </div>
+          <v-btn
+            variant="text"
+            class="text-capitalize text-body-2 font-weight-light"
+            >Privacy Policy</v-btn
+          >
+          <v-btn
+            variant="text"
+            class="text-capitalize text-body-2 font-weight-light"
+            >Terms & Services</v-btn
+          >
+        </div>
+      </v-container>
     </v-sheet>
 
     <VSpacer />

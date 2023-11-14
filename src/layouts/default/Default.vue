@@ -11,5 +11,5 @@
 import DefaultBar from "./AppBar.vue";
 import DefaultView from "./View.vue";
 import DefaultFooter from "./AppFooter.vue";
-import Defaultnav from "./Appnav.vue";
+import Defaultnav from "./AppNav.vue";
 </script>
