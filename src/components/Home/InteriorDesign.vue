@@ -1,19 +1,23 @@
 <template>
-  <h1
-    data-aos="fade-right"
-    data-aos-duration="2000"
-    class="text-h3 font-weight-bold pt-16"
-    v-if="$route.name !== 'interior-design'"
-  >
-    INTERIOR DESIGN
-  </h1>
-  <v-sheet height="100vh" class="d-flex align-center">
+  <v-sheet class="d-flex align-center">
     <v-card variant="text" align="center">
+      <v-card-item>
+        <v-card-title align="left">
+          <h1
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            class="text-h4 text-md-h3 font-weight-bold pt-16"
+            v-if="$route.name !== 'interior-design'"
+          >
+            INTERIOR DESIGN
+          </h1>
+        </v-card-title>
+      </v-card-item>
       <v-card-action>
         <v-btn
           class="rounded-xl me-8 my-16"
           elevation="0"
-          size="x-large"
+          :size="display.mdAndUp ? 'x-large' : 'large'"
           :class="{
             'bg-black': tab === 'Projects',
             'bg-lightBage': tab !== 'Projects',
@@ -24,7 +28,7 @@
         <v-btn
           class="rounded-xl"
           elevation="0"
-          size="x-large"
+          :size="display.mdAndUp ? 'x-large' : 'large'"
           :class="{
             'bg-black': tab === 'Services',
             'bg-lightBage': tab !== 'Services',
@@ -47,6 +51,7 @@
 import { VCardActions } from "vuetify/lib/components/index.mjs";
 import Projects from "./Projects.vue";
 import Services from "./Services.vue";
+import { useDisplay } from "vuetify/lib/framework.mjs";
 export default {
   name: "InteriorDesign",
   components: {
@@ -57,6 +62,7 @@ export default {
   data() {
     return {
       tab: "Projects",
+      display: useDisplay(),
     };
   },
 };

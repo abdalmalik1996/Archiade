@@ -1,5 +1,5 @@
 <template>
-  <v-sheet height="50vh">
+  <v-sheet>
     <v-card variant="text">
       <v-tabs v-model="tabProjects">
         <v-tab value="All">ALL</v-tab>

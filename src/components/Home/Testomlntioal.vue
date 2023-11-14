@@ -1,6 +1,6 @@
 <template>
   <v-sheet align="center " class="py-16">
-    <h3 class="text-h2 font-weight-bold my-16">OUR TESTOMINTIOAL</h3>
+    <h3 class="text-h4 text-md-h3 font-weight-bold my-16">OUR TESTOMINTIOAL</h3>
     <v-sheet class="d-flex justify-center">
       <v-carousel
         style="max-width: 1000px"

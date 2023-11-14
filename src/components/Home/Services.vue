@@ -1,5 +1,5 @@
 <template>
-  <v-sheet height="50vh ">
+  <v-sheet >
     <v-row class="ma-0">
       <v-col cols="12" md="4" sm="2" v-for="item in serveses">
         <v-card variant="text">

@@ -1,7 +1,7 @@
 <template>
-  <v-sheet class="pb-16">
+  <v-sheet class="">
     <v-carousel
-      :height="550"
+      :height="display.mdAndUp ? 550 : 300"
       :cycle="true"
       :show-arrows="false"
       hide-delimiters
@@ -18,11 +18,13 @@
 </template>
 <script>
 import "animate.css";
+import { useDisplay } from "vuetify/lib/framework.mjs";
 export default {
   name: "Introduction",
   data() {
     return {
       images: ["/01.png", "/02.png", "/03.png", "/04.png", "/05.png"],
+      display: useDisplay(),
     };
   },
 };

@@ -6,15 +6,15 @@
     transition="dialog-top-transition"
   >
     <v-toolbar color="black pa-5">
-      <v-img :height="80" src="/logo-light.png"></v-img>
+      <v-img :height="50" src="/logo-light.png"></v-img>
       <v-btn
-        style="position: absolute; right: 20px"
+        style="position: absolute; right: 0px"
         icon="mdi-menu"
         @click="dialogHandler = false"
       ></v-btn>
     </v-toolbar>
 
-    <v-card class="bg-black d-flex justify-center">
+    <v-card class="bg-black">
       <v-list lines="three" class="bg-black" align="center" variant="text">
         <v-list-item
           data-aos="fade-up"

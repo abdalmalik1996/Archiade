@@ -1,23 +1,22 @@
 <template>
-  <v-sheet class="py-16">
+  <v-sheet align="center" class="py-16">
     <h3
+      align="left"
       data-aos="fade-right"
       data-aos-duration="2000"
-      class="text-h3 font-weight-bold my-16"
+      class="text-h4 text-md-h3 font-weight-bold my-16"
     >
       OUR SHOWROOM
     </h3>
     <vueper-slides
       class="no-shadow"
-      autoplay
-      :visible-slides="4"
+      :visible-slides="display.mdAndUp ? 3 : 2"
       slide-multiple
       :gap="3"
-      :slide-ratio="1 / 4"
-      :dragging-distance="200"
-      :breakpoints="{ 800: { visibleSlides: 2, slideMultiple: 2 } }"
+      :slide-ratio="display.mdAndUp ? 1 / 4 : 2 / 4"
+      :arrows="display.lgAndUp"
     >
-      <vueper-slide v-for="(image, i) in images" :key="i" :image="image" loading />
+      <vueper-slide v-for="(image, i) in images" :key="i" :image="image" />
     </vueper-slides>
 
     <v-btn class="bg-black rounded-xl my-5" prepend-icon="mdi-eye"
@@ -30,6 +29,7 @@ import { storage } from "@/plugins/firbase";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
+import { useDisplay } from "vuetify/lib/framework.mjs";
 export default {
   data: () => ({
     // images: [
@@ -51,6 +51,7 @@ export default {
       storage,
       "gs://archiade-58dbc.appspot.com/storage/HomePage/OurShowroom"
     ),
+    display: useDisplay(),
   }),
 
   components: {
