@@ -31,8 +31,8 @@
         </template>
         <v-carousel-item v-for="(slide, i) in slides" :key="i">
           <v-sheet class="d-flex fill-height justify-center align-center">
-            <div class="text-body-1 text-center w-75">
-              <p class="mb-10 text-graylight">{{ slide.title }}</p>
+            <div class="text-body-1 text-center">
+              <p class="mb-1 text-graylight">{{ slide.title }}</p>
               <h5 class="text-graylight font-weight-bold text-body-1">
                 {{ slide.des }}
               </h5>

@@ -15,9 +15,9 @@
       </v-card-item>
       <v-card-action>
         <v-btn
-          class="rounded-xl me-8 my-16"
+          class="rounded-xl me-5 me-md-8 my-16"
           elevation="0"
-          :size="display.mdAndUp ? 'x-large' : 'large'"
+          :size="display.mdAndUp ? 'x-large' : 'default'"
           :class="{
             'bg-black': tab === 'Projects',
             'bg-lightBage': tab !== 'Projects',
@@ -28,7 +28,7 @@
         <v-btn
           class="rounded-xl"
           elevation="0"
-          :size="display.mdAndUp ? 'x-large' : 'large'"
+          :size="display.mdAndUp ? 'x-large' : 'default'"
           :class="{
             'bg-black': tab === 'Services',
             'bg-lightBage': tab !== 'Services',
