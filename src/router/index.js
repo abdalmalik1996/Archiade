@@ -20,7 +20,7 @@ const routes = [
         name: "interior-design",
         component: () =>
           import(
-            /* webpackChunkName: "home" */ "@/views/interiorDesignViews.vue"
+            /* webpackChunkName: "home" */ "@/views/InteriorDesignViews.vue"
           ),
       },
       {
