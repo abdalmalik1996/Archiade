@@ -2,7 +2,7 @@
   <v-sheet style="height: 100vh" class="d-flex align-center">
     <v-row>
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
-        <v-card variant="text">
+        <v-card variant="text" data-aos="fade-up" data-aos-duration="2000">
           <v-card-title class="text-wrap pa-0"
             ><h3 class="text-h3 line-hight-1">
               CRAFTING COMFORT <br />
@@ -20,7 +20,6 @@
               tailored solutions, spanning furniture, lighting, finishes, and
               finer details
             </p>
-           
           </v-card-subtitle>
           <v-btn class="bg-black rounded-xl">READ MORE</v-btn>
         </v-card>

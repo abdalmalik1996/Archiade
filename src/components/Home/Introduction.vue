@@ -7,14 +7,17 @@
       hide-delimiters
     >
       <v-carousel-item
-        v-for="image in images"
+        transition="fade"
         :src="image"
         cover
-      ></v-carousel-item>
+        v-for="image in images"
+      >
+      </v-carousel-item>
     </v-carousel>
   </v-sheet>
 </template>
 <script>
+import "animate.css";
 export default {
   name: "Introduction",
   data() {
@@ -24,3 +27,14 @@ export default {
   },
 };
 </script>
+
+<style>
+.fade-enter-active {
+  animation: zoomIn;
+  animation-duration: 4s;
+}
+.fade-leave-active {
+  animation: fadeOut;
+  animation-duration: 1s;
+}
+</style>

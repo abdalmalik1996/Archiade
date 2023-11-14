@@ -54,10 +54,11 @@
         </v-window-item>
       </v-window>
     </v-card>
-
   </v-sheet>
 </template>
 <script>
+import { storage } from "@/plugins/firbase";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 export default {
   name: "Projects",
   data() {
@@ -71,12 +72,12 @@ export default {
           des: "An open Coffee Shop located in the most recent developed Mall in Teheran. We took care about the lay out the finishing selection and",
         },
         {
-          img: "Ren_0000-EDIT.jpg",
+          img: "Coffe-Shop-Teheran-scaled.jpg",
           title: "City Walk",
           des: "This project was a good exercise for our design team to propose a Beauty Salon located at Dubai Marina i. We study the space",
         },
         {
-          img: "VIEW-D1.jpg",
+          img: "Coffe-Shop-Teheran-scaled.jpg",
           title: "Beauty Salon Dubai",
           des: "This project was a good exercise for our design team to propose a Beauty Salon located at Dubai Marina i. We study the space",
         },
@@ -88,12 +89,12 @@ export default {
           des: "This Project is back dated 1995. A young couple ask for a different design villa from the usual Mediterranean style available everywhere. So we",
         },
         {
-          img: "VIEW-D1.jpg",
+          img: "4Garden-scaled.jpg",
           title: "Asian Florida Style Beach Villa Jeddah",
           des: "This Project is back dated 1995. A young couple ask for a different design villa from the usual Mediterranean style available everywhere. So we",
         },
         {
-          img: "2.jpg",
+          img: "4Garden-scaled.jpg",
           title: "Multi Brands Office Building Dubai",
           des: "This was a very challenging and interesting project for our Design Team. The client, a young man with a strong character, decided to build",
         },
@@ -107,12 +108,12 @@ export default {
         {
           title: "Beauty Salon Dubai",
           des: "This project was a good exercise for our design team to propose a Beauty Salon located at Dubai Marina i. We study the space",
-          img: "01-2-scaled.jpg",
+          img: "VIEW-D1.jpg",
         },
         {
           title: "Rotana Head Office Kingdom Tower Riyadh",
           des: "This prestigious project was designed by Michel Bequin a France interior designer. Rotana is a media company in the Middle East similar to Virgin",
-          img: "01-1.jpg",
+          img: "VIEW-D1.jpg",
         },
       ],
     };

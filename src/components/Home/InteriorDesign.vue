@@ -1,5 +1,12 @@
 <template>
-  <h1 class="text-h3 font-weight-bold pt-16">INTERIOR DESIGN</h1>
+  <h1
+    data-aos="fade-right"
+    data-aos-duration="2000"
+    class="text-h3 font-weight-bold pt-16"
+    v-if="$route.name !== 'interior-design'"
+  >
+    INTERIOR DESIGN
+  </h1>
   <v-sheet height="100vh" class="d-flex align-center">
     <v-card variant="text" align="center">
       <v-card-action>
@@ -52,7 +59,9 @@ export default {
       tab: "Projects",
     };
   },
-};
+
+}
+
 </script>
 
 <style scoped></style>
