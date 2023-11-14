@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <Defaultnav />
+    <DefaultNav />
     <default-bar />
     <default-view />
     <DefaultFooter />
@@ -11,5 +11,5 @@
 import DefaultBar from "./AppBar.vue";
 import DefaultView from "./View.vue";
 import DefaultFooter from "./AppFooter.vue";
-import Defaultnav from "./AppNav.vue";
+import DefaultNav from "./AppNav.vue";
 </script>
