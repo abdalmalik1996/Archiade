@@ -59,9 +59,7 @@ export default {
       tab: "Projects",
     };
   },
-
-}
-
+};
 </script>
 
 <style scoped></style>
