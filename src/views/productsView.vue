@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: "productsView",
+  name: "ProductsView",
   data() {
     return {
       drawer: null,
