@@ -8,7 +8,7 @@
         <v-main>
           <v-sheet>
             <v-card variant="text" class="px-3">
-              <v-img cover :height="500" src="/public/04.png"></v-img>
+              <v-img cover :height="500" src="/04.png"></v-img>
               <div class="d-flex justify-end mt-5">
                 <v-btn @click="drawer = !drawer" color="black">Details</v-btn>
               </div>
@@ -16,7 +16,7 @@
             <v-row class="ma-0 pa-0">
               <v-col cols="12" md="4" v-for="n in 10">
                 <v-card>
-                  <v-img src="/public/02.png" alt="" />
+                  <v-img src="/02.png" alt="" />
                 </v-card>
               </v-col>
             </v-row>

@@ -6,11 +6,11 @@
       </v-sheet>
       <v-row>
         <v-col cols="12" md="6">
-          <v-img src="/public/Coffe-Shop-Teheran-scaled.jpg"></v-img>
+          <v-img src="/Coffe-Shop-Teheran-scaled.jpg"></v-img>
           <v-row class="ma-0 mt-5" style="gap: 5px">
-            <v-img src="/public/Coffe-Shop-Teheran-scaled.jpg"></v-img>
-            <v-img src="/public/Coffe-Shop-Teheran-scaled.jpg"></v-img>
-            <v-img src="/public/Coffe-Shop-Teheran-scaled.jpg"></v-img>
+            <v-img src="/Coffe-Shop-Teheran-scaled.jpg"></v-img>
+            <v-img src="/Coffe-Shop-Teheran-scaled.jpg"></v-img>
+            <v-img src="/Coffe-Shop-Teheran-scaled.jpg"></v-img>
           </v-row>
         </v-col>
         <v-col cols="12" md="6">
@@ -58,7 +58,7 @@
 
 <script>
 export default {
-  name: "projectsView",
+  name: "ProjectsView",
   data() {
     return {
       items: [

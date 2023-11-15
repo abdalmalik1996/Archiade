@@ -15,7 +15,7 @@
             :to="{ name: 'products', params: { name: item } }"
             variant="text"
           >
-            <v-img cover src="/public/Coffe-Shop-Teheran-scaled.jpg"></v-img>
+            <v-img cover src="/Coffe-Shop-Teheran-scaled.jpg"></v-img>
             <v-card-title class="text-wrap" align="center"
               ><h3 class="text-h6 font-weight-bold">
                 {{ item }}
