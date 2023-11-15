@@ -1,7 +1,18 @@
 <template>
   <v-sheet align="center " class="py-16">
-    <h3 class="text-h4 text-md-h3 font-weight-bold my-16">OUR TESTOMINTIOAL</h3>
-    <v-sheet class="d-flex justify-center">
+    <h3
+      data-aos="zoom-in"
+      data-aos-duration="2000"
+      class="text-h4 text-md-h3 font-weight-bold my-16"
+    >
+      OUR TESTOMINTIOAL
+    </h3>
+    <v-sheet
+      class="d-flex justify-center"
+      data-aos="zoom-in-up"
+      data-aos-duration="2000"
+      data-aos-easing="ease-out-cubic"
+    >
       <v-carousel
         style="max-width: 1000px"
         hide-delimiter-background
@@ -77,5 +88,3 @@ export default {
   },
 };
 </script>
-
-

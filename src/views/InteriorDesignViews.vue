@@ -6,12 +6,7 @@
       :height="300"
     >
       <v-card-title
-        ><h3
-          class="text-h3 text-white"
-          
-        >
-          Interior Design
-        </h3></v-card-title
+        ><h3 class="text-h3 text-white">Interior Design</h3></v-card-title
       >
     </v-card>
     <v-container>

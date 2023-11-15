@@ -46,6 +46,16 @@ const routes = [
         name: "Request",
         component: () => import("@/views/RequestViews.vue"),
       },
+      {
+        path: "/interior-design/Projects/:name",
+        name: "Projects",
+        component: () => import("@/views/ProjectsView.vue"),
+      },
+      {
+        path: "/Showroom/products/:name",
+        name: "products",
+        component: () => import("@/views/productsView.vue"),
+      },
     ],
   },
 ];

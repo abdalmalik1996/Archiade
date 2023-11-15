@@ -10,10 +10,12 @@
             alt=""
             class="elevation-5"
           ></v-img>
-          <v-card-title>
+          <v-card-title class="animate__animated animate__fadeInUp">
             {{ item.title }}
           </v-card-title>
-          <v-card-subtitle class="text-wrap">
+          <v-card-subtitle
+            class="text-wrap animate__animated animate__fadeInUp"
+          >
             {{ item.des }}
           </v-card-subtitle>
         </v-card>
@@ -39,7 +41,7 @@ export default {
           des: "This Project is back dated 1995. A young couple ask for a different design villa from the usual Mediterranean style available everywhere. So we",
         },
         {
-          img: "2.jpg",
+          img: "VIEW-D1.jpg",
           title: "Multi Brands Office Building Dubai",
           des: "This was a very challenging and interesting project for our Design Team. The client, a young man with a strong character, decided to build",
         },

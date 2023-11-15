@@ -10,7 +10,11 @@
         <v-window-item value="All">
           <v-row class="ma-0">
             <v-col cols="12" md="4" v-for="item in all">
-              <v-card variant="text" class="pa-1">
+              <v-card
+                :to="{ name: 'Projects', params: { name: item.title } }"
+                variant="text"
+                class="pa-1"
+              >
                 <v-img
                   cover
                   class="elevation-5"
@@ -18,12 +22,17 @@
                   :src="item.img"
                   alt=""
                 ></v-img>
-                <v-card-title>
-                  {{ item.title }}
-                </v-card-title>
-                <v-card-subtitle class="text-wrap">
-                  {{ item.des }}
-                </v-card-subtitle>
+                <v-card-item>
+                  <v-card-title class="animate__animated animate__fadeInUp">
+                    {{ item.title }}
+                  </v-card-title>
+
+                  <v-card-subtitle
+                    class="text-wrap animate__animated animate__fadeInUp"
+                  >
+                    {{ item.des }}
+                  </v-card-subtitle>
+                </v-card-item>
               </v-card>
             </v-col>
           </v-row>
@@ -31,7 +40,11 @@
         <v-window-item value="Residential">
           <v-row class="ma-0">
             <v-col cols="12" md="4" v-for="item in residential">
-              <v-card variant="text" class="pa-1">
+              <v-card
+                :to="{ name: 'Projects', params: { name: item.title } }"
+                variant="text"
+                class="pa-1"
+              >
                 <v-img
                   cover
                   class="elevation-5"
@@ -39,10 +52,12 @@
                   :src="item.img"
                   alt=""
                 ></v-img>
-                <v-card-title>
+                <v-card-title class="animate__animated animate__fadeInUp">
                   {{ item.title }}
                 </v-card-title>
-                <v-card-subtitle class="text-wrap">
+                <v-card-subtitle
+                  class="text-wrap animate__animated animate__fadeInUp"
+                >
                   {{ item.des }}
                 </v-card-subtitle>
               </v-card>
@@ -52,7 +67,11 @@
         <v-window-item value="Commercial">
           <v-row class="ma-0">
             <v-col cols="12" md="4" v-for="item in Commercial">
-              <v-card variant="text" class="pa-1">
+              <v-card
+                variant="text"
+                class="pa-1"
+                :to="{ name: 'Projects', params: { name: item.title } }"
+              >
                 <v-img
                   class="elevation-5"
                   cover
@@ -60,10 +79,12 @@
                   :src="item.img"
                   alt=""
                 ></v-img>
-                <v-card-title>
+                <v-card-title class="animate__animated animate__fadeInUp">
                   {{ item.title }}
                 </v-card-title>
-                <v-card-subtitle class="text-wrap">
+                <v-card-subtitle
+                  class="text-wrap animate__animated animate__fadeInUp"
+                >
                   {{ item.des }}
                 </v-card-subtitle>
               </v-card>
@@ -134,6 +155,7 @@ export default {
           img: "VIEW-D1.jpg",
         },
       ],
+      // test: residential.concat(Commercial),
     };
   },
 };
