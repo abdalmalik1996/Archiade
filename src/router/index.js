@@ -39,12 +39,12 @@ const routes = [
       {
         path: "/interior-design/Projects/:name",
         name: "Projects",
-        component: () => import("@/views/ProjectsView.vue"),
+        component: () => import("@/views/projectsView.vue"),
       },
       {
         path: "/Showroom/products/:name",
         name: "products",
-        component: () => import("@/views/ProductsView.vue"),
+        component: () => import("@/views/productsView.vue"),
       },
     ],
   },
