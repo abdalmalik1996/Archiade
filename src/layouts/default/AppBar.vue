@@ -24,7 +24,9 @@
           </v-btn-toggle></v-col
         >
         <v-col class="pa-0" align="end" cols="2" v-if="display.mdAndUp">
-          <v-btn class="bg-black rounded-xl"> send Request </v-btn>
+          <v-btn to="/Send-Request" class="bg-black rounded-xl">
+            send Request
+          </v-btn>
         </v-col>
         <VSpacer />
         <v-col cols="1" v-if="display.smAndDown">

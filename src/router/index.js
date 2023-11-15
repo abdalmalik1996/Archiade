@@ -41,6 +41,11 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "home" */ "@/views/aboutUsViews.vue"),
       },
+      {
+        path: "/Send-Request",
+        name: "Request",
+        component: () => import("@/views/RequestViews.vue"),
+      },
     ],
   },
 ];
