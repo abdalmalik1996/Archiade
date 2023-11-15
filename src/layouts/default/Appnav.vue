@@ -34,7 +34,9 @@
           >
         </v-list-item>
         <v-list-item>
-          <v-btn block>SEND REQUEST</v-btn>
+          <v-btn block to="/Send-Request" @click="dialog = false"
+            >SEND REQUEST</v-btn
+          >
         </v-list-item>
         <v-list-item>
           <v-btn icon="mdi-facebook" class="bg-transparent"></v-btn>

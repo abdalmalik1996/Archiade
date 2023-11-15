@@ -3,7 +3,11 @@
   <Whatsapp />
 </template>
 
-<script setup>
+<script>
 import Whatsapp from "./components/Whatsapp.vue";
-//
+export default {
+  components: {
+    Whatsapp,
+  },
+};
 </script>
