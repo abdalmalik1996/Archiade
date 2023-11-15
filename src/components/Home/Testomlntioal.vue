@@ -15,6 +15,7 @@
             color="black"
             :ripple="false"
             @click="props.onClick"
+            style="position: absolute; left: -5px"
             elevation="0"
             ><v-icon size="x-large">mdi-chevron-left</v-icon></v-btn
           >
@@ -26,16 +27,21 @@
             :ripple="false"
             @click="props.onClick"
             elevation="0"
+            style="position: absolute; right: -5px"
             ><v-icon size="x-large">mdi-chevron-right</v-icon></v-btn
           >
         </template>
         <v-carousel-item v-for="(slide, i) in slides" :key="i">
-          <v-sheet class="d-flex fill-height justify-center align-center">
-            <div class="text-body-1 text-center">
-              <p class="mb-1 text-graylight">{{ slide.title }}</p>
-              <h5 class="text-graylight font-weight-bold text-body-1">
-                {{ slide.des }}
-              </h5>
+          <v-sheet height="100%" class="text-center d-flex justify-center">
+            <div
+              class="d-flex flex-column fill-height justify-center align-center text-body-1 w-75"
+            >
+              <div>
+                <p class="mb-1 text-graylight">{{ slide.title }}</p>
+                <h5 class="text-graylight font-weight-bold text-body-1 mt-2">
+                  {{ slide.des }}
+                </h5>
+              </div>
             </div>
           </v-sheet>
         </v-carousel-item>
@@ -72,4 +78,4 @@ export default {
 };
 </script>
 
-<style></style>
+

@@ -5,6 +5,8 @@
       :cycle="true"
       :show-arrows="false"
       hide-delimiters
+      class="elevation-5"
+      interval="8000"
     >
       <v-carousel-item
         transition="fade"

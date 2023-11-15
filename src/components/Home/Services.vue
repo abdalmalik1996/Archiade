@@ -1,9 +1,15 @@
 <template>
-  <v-sheet >
+  <v-sheet>
     <v-row class="ma-0">
-      <v-col cols="12" md="4" sm="2" v-for="item in serveses">
+      <v-col cols="12" md="4" sm="2" v-for="(item, i) in serveses" :key="i">
         <v-card variant="text">
-          <v-img cover :height="300" :src="item.img" alt=""></v-img>
+          <v-img
+            cover
+            :height="300"
+            :src="item.img"
+            alt=""
+            class="elevation-5"
+          ></v-img>
           <v-card-title>
             {{ item.title }}
           </v-card-title>

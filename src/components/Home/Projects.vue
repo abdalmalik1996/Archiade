@@ -10,8 +10,14 @@
         <v-window-item value="All">
           <v-row class="ma-0">
             <v-col cols="12" md="4" v-for="item in all">
-              <v-card variant="text">
-                <v-img cover :height="300" :src="item.img" alt=""></v-img>
+              <v-card variant="text" class="pa-1">
+                <v-img
+                  cover
+                  class="elevation-5"
+                  :height="300"
+                  :src="item.img"
+                  alt=""
+                ></v-img>
                 <v-card-title>
                   {{ item.title }}
                 </v-card-title>
@@ -25,8 +31,14 @@
         <v-window-item value="Residential">
           <v-row class="ma-0">
             <v-col cols="12" md="4" v-for="item in residential">
-              <v-card variant="text">
-                <v-img cover :height="300" :src="item.img" alt=""></v-img>
+              <v-card variant="text" class="pa-1">
+                <v-img
+                  cover
+                  class="elevation-5"
+                  :height="300"
+                  :src="item.img"
+                  alt=""
+                ></v-img>
                 <v-card-title>
                   {{ item.title }}
                 </v-card-title>
@@ -40,8 +52,14 @@
         <v-window-item value="Commercial">
           <v-row class="ma-0">
             <v-col cols="12" md="4" v-for="item in Commercial">
-              <v-card variant="text">
-                <v-img cover :height="300" :src="item.img" alt=""></v-img>
+              <v-card variant="text" class="pa-1">
+                <v-img
+                  class="elevation-5"
+                  cover
+                  :height="300"
+                  :src="item.img"
+                  alt=""
+                ></v-img>
                 <v-card-title>
                   {{ item.title }}
                 </v-card-title>

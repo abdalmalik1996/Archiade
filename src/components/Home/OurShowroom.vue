@@ -4,7 +4,7 @@
       align="left"
       data-aos="fade-right"
       data-aos-duration="2000"
-      class="text-h4 text-md-h3 font-weight-bold my-16"
+      class="text-h5 text-md-h3 font-weight-bold my-16"
     >
       OUR SHOWROOM
     </h3>
