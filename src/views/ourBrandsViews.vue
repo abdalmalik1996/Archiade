@@ -36,31 +36,27 @@
 </template>
 
 <script>
-import { storage } from "@/plugins/firbase";
-import { ref, listAll, getDownloadURL } from "firebase/storage";
-
 export default {
   data() {
     return {
       brands: [],
-      storageRef: ref(
-        storage,
-        "gs://archiade-58dbc.appspot.com/storage/OurBands"
-      ),
     };
   },
-  mounted() {
-    listAll(this.storageRef)
-      .then((res) => {
-        res.items.forEach((itemRef) => {
-          getDownloadURL(itemRef).then((url) => {
-            this.brands.push(url);
-          });
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+  async mounted() {
+    await this.loadImages();
+  },
+  methods: {
+    // ../../assets/COMMERCIAL/**/*.jpg
+    // ../assets/Ourbands/**/*.png
+    async loadImages() {
+      const imagesContext = import.meta.glob("../assets/Ourbands/**/*.png");
+      this.brands = await Promise.all(
+        Object.values(imagesContext).map(async (importer) => {
+          const module = await importer();
+          return module.default;
+        })
+      );
+    },
   },
 };
 </script>

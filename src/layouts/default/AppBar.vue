@@ -74,7 +74,9 @@ export default {
   },
 };
 </script>
+
 <style scoped>
+
 .link::before {
   content: "";
   position: absolute;

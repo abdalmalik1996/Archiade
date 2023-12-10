@@ -2,75 +2,19 @@
   <v-sheet>
     <v-card variant="text">
       <v-tabs v-model="tabProjects">
-        <v-tab value="All">ALL</v-tab>
-        <v-tab value="Residential">RESIDENTIAL</v-tab>
-        <v-tab value="Commercial">COMMERCIAL</v-tab>
+        <v-tab v-for="tab in tabs" :key="tab.value" :value="tab.value">{{
+          tab.label
+        }}</v-tab>
       </v-tabs>
       <v-window v-model="tabProjects">
-        <v-window-item value="All">
+        <v-window-item v-for="tab in tabs" :key="tab.value" :value="tab.value">
           <v-row class="ma-0">
-            <v-col cols="12" md="4" v-for="item in all">
-              <v-card
-                :to="{ name: 'Projects', params: { name: item.title } }"
-                variant="text"
-                class="pa-1"
-              >
-                <v-img
-                  cover
-                  class="elevation-5"
-                  :height="300"
-                  :src="item.img"
-                  alt=""
-                ></v-img>
-                <v-card-item>
-                  <v-card-title class="animate__animated animate__fadeInUp">
-                    {{ item.title }}
-                  </v-card-title>
-
-                  <v-card-subtitle
-                    class="text-wrap animate__animated animate__fadeInUp"
-                  >
-                    {{ item.des }}
-                  </v-card-subtitle>
-                </v-card-item>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-window-item>
-        <v-window-item value="Residential">
-          <v-row class="ma-0">
-            <v-col cols="12" md="4" v-for="item in residential">
-              <v-card
-                :to="{ name: 'Projects', params: { name: item.title } }"
-                variant="text"
-                class="pa-1"
-              >
-                <v-img
-                  cover
-                  class="elevation-5"
-                  :height="300"
-                  :src="item.img"
-                  alt=""
-                ></v-img>
-                <v-card-title class="animate__animated animate__fadeInUp">
-                  {{ item.title }}
-                </v-card-title>
-                <v-card-subtitle
-                  class="text-wrap animate__animated animate__fadeInUp"
-                >
-                  {{ item.des }}
-                </v-card-subtitle>
-              </v-card>
-            </v-col>
-          </v-row>
-        </v-window-item>
-        <v-window-item value="Commercial">
-          <v-row class="ma-0">
-            <v-col cols="12" md="4" v-for="item in Commercial">
+            <v-col cols="12" sm="4" v-for="item in getFilteredItems(tab.value)">
               <v-card
                 variant="text"
                 class="pa-1"
                 :to="{ name: 'Projects', params: { name: item.title } }"
+                @click="IntDeVieHan(item)"
               >
                 <v-img
                   class="elevation-5"
@@ -82,11 +26,6 @@
                 <v-card-title class="animate__animated animate__fadeInUp">
                   {{ item.title }}
                 </v-card-title>
-                <v-card-subtitle
-                  class="text-wrap animate__animated animate__fadeInUp"
-                >
-                  {{ item.des }}
-                </v-card-subtitle>
               </v-card>
             </v-col>
           </v-row>
@@ -95,68 +34,38 @@
     </v-card>
   </v-sheet>
 </template>
+
 <script>
-import { storage } from "@/plugins/firbase";
-import { ref, listAll, getDownloadURL } from "firebase/storage";
+import residentialData from "@/plugins/data/residential.json";
+import commercialData from "@/plugins/data/commercial.json";
+
 export default {
   name: "Projects",
   data() {
     return {
       tabProjects: null,
-
-      all: [
-        {
-          img: "Coffe-Shop-Teheran-scaled.jpg",
-          title: "Coffee Shop Teheran",
-          des: "An open Coffee Shop located in the most recent developed Mall in Teheran. We took care about the lay out the finishing selection and",
-        },
-        {
-          img: "Coffe-Shop-Teheran-scaled.jpg",
-          title: "City Walk",
-          des: "This project was a good exercise for our design team to propose a Beauty Salon located at Dubai Marina i. We study the space",
-        },
-        {
-          img: "Coffe-Shop-Teheran-scaled.jpg",
-          title: "Beauty Salon Dubai",
-          des: "This project was a good exercise for our design team to propose a Beauty Salon located at Dubai Marina i. We study the space",
-        },
+      tabs: [
+        { label: "RESIDENTIAL", value: "Residential" },
+        { label: "COMMERCIAL", value: "Commercial" },
       ],
-      residential: [
-        {
-          img: "4Garden-scaled.jpg",
-          title: "Georges",
-          des: "This Project is back dated 1995. A young couple ask for a different design villa from the usual Mediterranean style available everywhere. So we",
-        },
-        {
-          img: "4Garden-scaled.jpg",
-          title: "Asian Florida Style Beach Villa Jeddah",
-          des: "This Project is back dated 1995. A young couple ask for a different design villa from the usual Mediterranean style available everywhere. So we",
-        },
-        {
-          img: "4Garden-scaled.jpg",
-          title: "Multi Brands Office Building Dubai",
-          des: "This was a very challenging and interesting project for our Design Team. The client, a young man with a strong character, decided to build",
-        },
-      ],
-      Commercial: [
-        {
-          title: "Rotana Head Office Kingdom Tower Riyadh",
-          des: "This prestigious project was designed by Michel Bequin a France interior designer. Rotana is a media company in the Middle East similar to Virgin",
-          img: "VIEW-D1.jpg",
-        },
-        {
-          title: "Beauty Salon Dubai",
-          des: "This project was a good exercise for our design team to propose a Beauty Salon located at Dubai Marina i. We study the space",
-          img: "VIEW-D1.jpg",
-        },
-        {
-          title: "Rotana Head Office Kingdom Tower Riyadh",
-          des: "This prestigious project was designed by Michel Bequin a France interior designer. Rotana is a media company in the Middle East similar to Virgin",
-          img: "VIEW-D1.jpg",
-        },
-      ],
-      // test: residential.concat(Commercial),
+      residential: residentialData,
+      commercial: commercialData,
     };
+  },
+  methods: {
+    getFilteredItems(tabValue) {
+      const data =
+        tabValue === "Residential" ? this.residential : this.commercial;
+      if (this.$route.name === "Home") {
+        return data.slice(0, 3);
+      } else {
+        return data;
+      }
+    },
+    IntDeVieHan(item) {
+      const jsonString = JSON.stringify(item);
+      localStorage.setItem("IntDeVieHan", jsonString);
+    },
   },
 };
 </script>

@@ -1,25 +1,17 @@
 <template>
   <v-sheet class="">
     <v-carousel
-      :height="display.mdAndUp ? 550 : 300"
+      :height="display.mdAndUp ? 550 : 400"
       :cycle="true"
-      :show-arrows="false"
-      hide-delimiters
       class="elevation-5"
-      interval="8000"
+      interval="3000"
     >
-      <v-carousel-item
-        transition="fade"
-        :src="image"
-        cover
-        v-for="image in images"
-      >
+      <v-carousel-item :src="image" cover v-for="image in images">
       </v-carousel-item>
     </v-carousel>
   </v-sheet>
 </template>
 <script>
-import "animate.css";
 import { useDisplay } from "vuetify/lib/framework.mjs";
 export default {
   name: "Introduction",
@@ -32,13 +24,4 @@ export default {
 };
 </script>
 
-<style>
-.fade-enter-active {
-  animation: zoomIn;
-  animation-duration: 4s;
-}
-.fade-leave-active {
-  animation: fadeOut;
-  animation-duration: 1s;
-}
-</style>
+<style></style>

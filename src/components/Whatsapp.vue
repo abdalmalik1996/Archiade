@@ -1,5 +1,12 @@
 <template>
-  <v-btn icon="mdi-whatsapp" class="whatsapp"> </v-btn>
+  <v-btn
+    tag="a"
+    target="_blank"
+    icon="mdi-whatsapp"
+    class="whatsapp"
+    href="https://wa.me/+971586282795"
+  >
+  </v-btn>
 </template>
 
 <script>

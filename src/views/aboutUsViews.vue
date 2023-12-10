@@ -38,6 +38,7 @@
         <v-col cols="12" md="5" class="mt-10">
           <v-expansion-panels>
             <v-expansion-panel
+              class="bg-black mb-1"
               v-for="(item, i) in items"
               :key="i"
               :title="item.title"

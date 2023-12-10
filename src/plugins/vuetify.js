@@ -21,8 +21,8 @@ export default createVuetify({
           surface: "#E7D9CD",
           primary: "#1867C0",
           secondary: "#5CBBF6",
-          lightBage:'#EADFD5',
-          graylight : "#7a7a7a"
+          lightBage: "#EADFD5",
+          graylight: "#7a7a7a",
         },
       },
     },

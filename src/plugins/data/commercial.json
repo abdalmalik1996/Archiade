@@ -1,0 +1,204 @@
+[
+  {
+    "id": "1",
+    "title": "Boutique Hotel Jeddah",
+    "img": "/inter/c/1_Boutique/02.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/1_Boutique/08.jpg",
+        "arr": [
+          "/inter/c/1_Boutique/01.jpg",
+          "/inter/c/1_Boutique/02.jpg",
+          "/inter/c/1_Boutique/03.jpg",
+          "/inter/c/1_Boutique/04.jpg",
+          "/inter/c/1_Boutique/05.jpg",
+          "/inter/c/1_Boutique/06.jpg",
+          "/inter/c/1_Boutique/07.jpg",
+          "/inter/c/1_Boutique/08.jpg",
+          "/inter/c/1_Boutique/09.jpg",
+          "/inter/c/1_Boutique/10.jpg",
+          "/inter/c/1_Boutique/11.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "BNY Mellon Bank DIFC Dubai",
+    "img": "/inter/c/2_Bny/01.JPG",
+    "images": [
+      {
+        "preview": "/inter/c/2_Bny/05.JPG",
+        "arr": [
+          "/inter/c/2_Bny/01.JPG",
+          "/inter/c/2_Bny/02.JPG",
+          "/inter/c/2_Bny/03.JPG",
+          "/inter/c/2_Bny/04.JPG",
+          "/inter/c/2_Bny/05.JPG"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "title": "Corporate Office DIFC Dubai",
+    "img": "/inter/c/3_Corporate/11.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/2_Bny/01.JPG",
+        "arr": [
+          "/inter/c/3_Corporate/01.jpg",
+          "/inter/c/3_Corporate/02.jpg",
+          "/inter/c/3_Corporate/03.jpg",
+          "/inter/c/3_Corporate/04.jpg",
+          "/inter/c/3_Corporate/05.JPG",
+          "/inter/c/3_Corporate/06.jpg",
+          "/inter/c/3_Corporate/07.jpg",
+          "/inter/c/3_Corporate/08.jpg",
+          "/inter/c/3_Corporate/09.jpg",
+          "/inter/c/3_Corporate/10.jpg",
+          "/inter/c/3_Corporate/11.jpg",
+          "/inter/c/3_Corporate/12.jpg",
+          "/inter/c/3_Corporate/13.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "title": "Banca Intesa DIFC Dubai",
+    "img": "/inter/c/4_BancaIntesa/01.JPG",
+    "images": [
+      {
+        "preview": "/inter/c/4_BancaIntesa/03.jpg",
+        "arr": [
+          "/inter/c/4_BancaIntesa/01.JPG",
+          "/inter/c/4_BancaIntesa/02.JPG",
+          "/inter/c/4_BancaIntesa/03.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "title": "Heritage Club Istanbul",
+    "img": "/inter/c/5_Heritage/01.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/5_Heritage/05.png",
+        "arr": [
+          "/inter/c/5_Heritage/01.jpg",
+          "/inter/c/5_Heritage/02.jpg",
+          "/inter/c/5_Heritage/03.jpg",
+          "/inter/c/5_Heritage/04.jpg",
+          "/inter/c/5_Heritage/05.png"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "title": "Multi Brands Office Building Dubai",
+    "img": "/inter/c/6_MultiBrands/01.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/6_MultiBrands/05.jpg",
+        "arr": [
+          "/inter/c/6_MultiBrands/01.jpg",
+          "/inter/c/6_MultiBrands/02.jpg",
+          "/inter/c/6_MultiBrands/03.jpg",
+          "/inter/c/6_MultiBrands/04.jpg",
+          "/inter/c/6_MultiBrands/05.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "title": "ING Office DIFC Dubai",
+    "img": "/inter/c/7_INGHead/01.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/7_INGHead/05.jpg",
+        "arr": [
+          "/inter/c/7_INGHead/01.jpg",
+          "/inter/c/7_INGHead/02.jpg",
+          "/inter/c/7_INGHead/03.jpg",
+          "/inter/c/7_INGHead/04.jpg",
+          "/inter/c/7_INGHead/05.jpg",
+          "/inter/c/7_INGHead/06.jpg",
+          "/inter/c/7_INGHead/07.jpg",
+          "/inter/c/7_INGHead/08.jpg",
+          "/inter/c/7_INGHead/09.jpg",
+          "/inter/c/7_INGHead/10.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "title": "Beuaty Salon",
+    "img": "/inter/c/8_Beauty/01.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/8_Beauty/05.jpg",
+        "arr": [
+          "/inter/c/8_Beauty/01.jpg",
+          "/inter/c/8_Beauty/02.jpg",
+          "/inter/c/8_Beauty/03.jpg",
+          "/inter/c/8_Beauty/04.jpg",
+          "/inter/c/8_Beauty/05.jpg",
+          "/inter/c/8_Beauty/06.jpg",
+          "/inter/c/8_Beauty/07.jpg",
+          "/inter/c/8_Beauty/08.jpg",
+          "/inter/c/8_Beauty/09.jpg",
+          "/inter/c/8_Beauty/10.jpg"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "title": "Rotana Head Office Kingdom Tower Riysdh",
+    "img": "/inter/c/9_RotanaHead/01.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/9_RotanaHead/05.JPG",
+        "arr": [
+          "/inter/c/9_RotanaHead/01.jpg",
+          "/inter/c/9_RotanaHead/02.JPG",
+          "/inter/c/9_RotanaHead/03.JPG",
+          "/inter/c/9_RotanaHead/04.JPG",
+          "/inter/c/9_RotanaHead/05.JPG",
+          "/inter/c/9_RotanaHead/06.JPG",
+          "/inter/c/9_RotanaHead/07.JPG",
+          "/inter/c/9_RotanaHead/08.JPG",
+          "/inter/c/9_RotanaHead/09.JPG",
+          "/inter/c/9_RotanaHead/10.JPG",
+          "/inter/c/9_RotanaHead/11.JPG",
+          "/inter/c/9_RotanaHead/12.JPG",
+          "/inter/c/9_RotanaHead/13.JPG",
+          "/inter/c/9_RotanaHead/14.JPG",
+          "/inter/c/9_RotanaHead/15.JPG",
+          "/inter/c/9_RotanaHead/16.JPG",
+          "/inter/c/9_RotanaHead/17.JFIF"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "title": "Emirates Tower Private Office Dubai",
+    "img": "/inter/c/10_Emirates/01.jpg",
+    "images": [
+      {
+        "preview": "/inter/c/10_Emirates/01.jpg",
+        "arr": [
+          "/inter/c/10_Emirates/01.jpg",
+          "/inter/c/10_Emirates/02.jpg",
+          "/inter/c/10_Emirates/03.jpg"
+        ]
+      }
+    ]
+  }
+]

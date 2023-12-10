@@ -8,69 +8,54 @@
     >
       OUR SHOWROOM
     </h3>
-    <vueper-slides
-      class="no-shadow"
-      :visible-slides="display.mdAndUp ? 3 : 2"
-      slide-multiple
-      :gap="3"
-      :slide-ratio="display.mdAndUp ? 1 / 4 : 2 / 4"
-      :arrows="display.lgAndUp"
-    >
-      <vueper-slide v-for="(image, i) in images" :key="i" :image="image" />
-    </vueper-slides>
 
-    <v-btn class="bg-black rounded-xl my-5" prepend-icon="mdi-eye"
+    <v-row class="ma-0">
+      <v-col cols="12" md="4" v-for="item in images">
+        <v-card
+          variant="text"
+          class="pa-1"
+          :to="{ name: 'Projects', params: { name: item.title } }"
+        >
+          <v-img
+            class="elevation-5"
+            cover
+            :height="300"
+            :src="item.img"
+            alt=""
+          ></v-img>
+          <v-card-title class="animate__animated animate__fadeInUp">
+            {{ item.title }}
+          </v-card-title>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-btn class="bg-black rounded-xl my-8" prepend-icon="mdi-eye"
       >SHOW MORE</v-btn
     >
   </v-sheet>
 </template>
 <script>
-import { storage } from "@/plugins/firbase";
-import { ref, listAll, getDownloadURL } from "firebase/storage";
-import { VueperSlides, VueperSlide } from "vueperslides";
-import "vueperslides/dist/vueperslides.css";
 import { useDisplay } from "vuetify/lib/framework.mjs";
+
+
 export default {
   data: () => ({
-    // images: [
-    //   "/Living.png",
-    //   "/Dining.png",
-    //   "/NightAreaBed.png",
-    //   "/NightAreaWardrobes.png",
-    //   "/Living.png",
-    //   "/Dining.png",
-    //   "/NightAreaBed.png",
-    //   "/NightAreaWardrobes.png",
-    //   "/Living.png",
-    //   "/Dining.png",
-    //   "/NightAreaBed.png",
-    //   "/NightAreaWardrobes.png",
-    // ],
-    images: [],
-    storageRef: ref(
-      storage,
-      "gs://archiade-58dbc.appspot.com/storage/HomePage/OurShowroom"
-    ),
+    images: [
+      {
+        title: "Living Room",
+        img: "4Garden-scaled.jpg",
+      },
+      {
+        title: "Dining Room",
+        img: "4Garden-scaled.jpg",
+      },
+      {
+        title: "Bed Room",
+        img: "4Garden-scaled.jpg",
+      },
+    ],
     display: useDisplay(),
   }),
-
-  components: {
-    VueperSlides,
-    VueperSlide,
-  },
-  mounted() {
-    listAll(this.storageRef)
-      .then((res) => {
-        res.items.forEach((itemRef) => {
-          getDownloadURL(itemRef).then((url) => {
-            this.images.push(url);
-          });
-        });
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  },
 };
 </script>
 <style></style>

@@ -4,7 +4,7 @@
       <v-col cols="12" md="6" class="d-flex justify-center align-center">
         <v-card variant="text" data-aos="fade-up" data-aos-duration="2000">
           <v-card-title class="text-wrap pa-0"
-            ><h3 class="text-h3 line-hight-1">
+            ><h3 class="text-h3 line-hight-1 font-weight-bold">
               CRAFTING COMFORT <br />
               WITH STYLE
             </h3></v-card-title
